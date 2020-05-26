@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SimpleUser.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Email
+            </th>
+            <th>
+                User Name
+            </th>
+            <th>
+                Phone Number
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.PhoneNumber)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
